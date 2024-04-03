@@ -24,7 +24,7 @@ jobs:
         git config --global user.email mjordan@quiverware.com
         git config --global user.name mjordan
         git status
-        git remote add origin https://$COMMIT_SECRET@github.com/quiverware/quiverware-website.git
+        git remote add origin https://${{secrets.commit_secret}}@github.com/quiverware/quiverware-website.git
         git checkout -b main
         git add --all
         git commit -m "update website"
