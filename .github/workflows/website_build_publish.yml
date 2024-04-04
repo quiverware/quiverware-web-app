@@ -18,7 +18,8 @@ jobs:
     - uses: actions/checkout@v4.1.2
     - uses: subosito/flutter-action@v2.14.0
     - run: flutter pub get
-    - run: flutter build web --release --base-href /quiverware-website/
+    #- run: flutter build web --release --base-href /quiverware-website/
+    - run: flutter build web --release
     - run: |
         cp CNAME build/web/CNAME
         cd build/web
